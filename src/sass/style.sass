@@ -1,6 +1,86 @@
 @import "reset.scss"
 @import "normalize.scss"
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap')
 
-::root
-    --bg-color: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%)
-    --accent-color: #FC7614
+*
+    box-sizing: border-box
+
+body
+    height: 100%
+    font-family: 'Overpass', sans-serif
+    background-color: #131518
+    display: flex
+    align-items: center
+    justify-content: center
+
+.card
+    max-width: 412px
+    height: auto
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    color: #969FAD
+    background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%)
+    padding: 32px
+    border-radius: 30px
+    @media (max-width: 375px)
+        max-width: 327px
+        padding: 24px
+    &__circle
+        width: 51px
+        height: 51px
+        background-color: #262E38
+        border-radius: 50%
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-bottom: 30px
+        cursor: pointer
+        transition: all .2s
+        @media (any-hover: hover)
+            &:hover
+                background-color: #FC7614
+                color: #FFFFFF
+        &_top
+            cursor: default
+            &:hover
+                background-color: #262E38
+                color: initial
+    &__title
+        font-weight: 700
+        font-size: 28px
+        line-height: 35px
+        color: #FFFFFF
+        margin-bottom: 15px
+    &__text
+        font-weight: 400
+        font-size: 15px
+        line-height: 24px
+        margin-bottom: 24px
+    &__rate
+        display: flex
+        justify-content: space-between
+        margin-bottom: 2px
+
+.button
+    width: 100%
+    height: 45px
+    border-radius: 22.5px
+    font-weight: 700
+    font-size: 15px
+    line-height: 19px
+    letter-spacing: 2px
+    text-transform: uppercase
+    color: #FFFFFF
+    background-color: #FC7614
+    border: none
+    cursor: pointer
+    transition: all .2s
+    @media (any-hover: hover)
+        &:hover
+            background-color: #FFFFFF
+            color: #FC7614
+
+.card__circle.active
+    background-color: #7C8798
+    color: #FFFFFF

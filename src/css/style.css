@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
 /* line 1, ../../../../../Users/dianadiaz/repos/interactive-rating-component/src/sass/_reset.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -432,10 +433,128 @@ template {
   display: none;
 }
 
-/* line 4, ../../../../../Users/dianadiaz/repos/interactive-rating-component/src/sass/style.sass */
-::root {
-  --bg-color: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
-  --accent-color: #FC7614;
+/* line 5, ../../../../../Users/dianadiaz/repos/interactive-rating-component/src/sass/style.sass */
+* {
+  box-sizing: border-box;
+}
+
+/* line 8, ../../../../../Users/dianadiaz/repos/interactive-rating-component/src/sass/style.sass */
+body {
+  height: 100%;
+  font-family: 'Overpass', sans-serif;
+  background-color: #131518;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* line 16, ../../../../../Users/dianadiaz/repos/interactive-rating-component/src/sass/style.sass */
+.card {
+  max-width: 412px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: #969FAD;
+  background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
+  padding: 32px;
+  border-radius: 30px;
+}
+
+@media (max-width: 375px) {
+  /* line 16, ../../../../../Users/dianadiaz/repos/interactive-rating-component/src/sass/style.sass */
+  .card {
+    max-width: 327px;
+    padding: 24px;
+  }
+}
+
+/* line 29, ../../../../../Users/dianadiaz/repos/interactive-rating-component/src/sass/style.sass */
+.card__circle {
+  width: 51px;
+  height: 51px;
+  background-color: #262E38;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+@media (any-hover: hover) {
+  /* line 41, ../../../../../Users/dianadiaz/repos/interactive-rating-component/src/sass/style.sass */
+  .card__circle:hover {
+    background-color: #FC7614;
+    color: #FFFFFF;
+  }
+}
+
+/* line 44, ../../../../../Users/dianadiaz/repos/interactive-rating-component/src/sass/style.sass */
+.card__circle_top {
+  cursor: default;
+}
+
+/* line 46, ../../../../../Users/dianadiaz/repos/interactive-rating-component/src/sass/style.sass */
+.card__circle_top:hover {
+  background-color: #262E38;
+  color: initial;
+}
+
+/* line 49, ../../../../../Users/dianadiaz/repos/interactive-rating-component/src/sass/style.sass */
+.card__title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 35px;
+  color: #FFFFFF;
+  margin-bottom: 15px;
+}
+
+/* line 55, ../../../../../Users/dianadiaz/repos/interactive-rating-component/src/sass/style.sass */
+.card__text {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+
+/* line 60, ../../../../../Users/dianadiaz/repos/interactive-rating-component/src/sass/style.sass */
+.card__rate {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+/* line 65, ../../../../../Users/dianadiaz/repos/interactive-rating-component/src/sass/style.sass */
+.button {
+  width: 100%;
+  height: 45px;
+  border-radius: 22.5px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 19px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #FC7614;
+  border: none;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+@media (any-hover: hover) {
+  /* line 80, ../../../../../Users/dianadiaz/repos/interactive-rating-component/src/sass/style.sass */
+  .button:hover {
+    background-color: #FFFFFF;
+    color: #FC7614;
+  }
+}
+
+/* line 84, ../../../../../Users/dianadiaz/repos/interactive-rating-component/src/sass/style.sass */
+.card__circle.active {
+  background-color: #7C8798;
+  color: #FFFFFF;
 }
 
 /*# sourceMappingURL=style.css.map */
