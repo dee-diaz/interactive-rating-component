@@ -2,6 +2,15 @@
 @import "normalize.scss"
 @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap')
 
+@mixin circle
+    width: 51px
+    height: 51px
+    background-color: #262E38
+    border-radius: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+
 *
     box-sizing: border-box
 
@@ -26,26 +35,18 @@ body
     @media (max-width: 375px)
         max-width: 327px
         padding: 24px
+    &__icon
+        @include circle
+        margin-bottom: 30px
     &__circle
-        width: 51px
-        height: 51px
-        background-color: #262E38
-        border-radius: 50%
-        display: flex
-        align-items: center
-        justify-content: center
+        @include circle
         margin-bottom: 30px
         cursor: pointer
-        transition: all .2s
+        transition: all .3s
         @media (any-hover: hover)
             &:hover
                 background-color: #FC7614
                 color: #FFFFFF
-        &_top
-            cursor: default
-            &:hover
-                background-color: #262E38
-                color: initial
     &__title
         font-weight: 700
         font-size: 28px
@@ -58,9 +59,28 @@ body
         line-height: 24px
         margin-bottom: 24px
     &__rate
+        width: 100%
         display: flex
         justify-content: space-between
         margin-bottom: 2px
+    &_submitted
+        justify-content: center
+        text-align: center
+    &__img
+        margin-bottom: 32px
+    &__your-rating
+        padding: 4px 20px
+        border-radius: 22.5px
+        background-color: #262E38
+        font-weight: 400
+        font-size: 15px
+        line-height: 24px
+        text-align: center
+        color: #FC7614
+        margin-bottom: 32px
+    &__text2
+        max-width: 340px
+        margin-bottom: 0
 
 .button
     width: 100%
@@ -75,7 +95,7 @@ body
     background-color: #FC7614
     border: none
     cursor: pointer
-    transition: all .2s
+    transition: all .3s
     @media (any-hover: hover)
         &:hover
             background-color: #FFFFFF
